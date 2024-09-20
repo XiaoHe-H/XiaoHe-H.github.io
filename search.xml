@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>数据结构和变量</title>
+      <link href="/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/"/>
+      <url>/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>数据类型分为基本数据类型和引用数据类型</p><ul><li>基本数据类型<ul><li>整型<ul><li>byte</li><li>short</li><li>int</li><li>long</li></ul></li><li>浮点型<ul><li>float</li><li>double</li></ul></li><li>字符类型<ul><li>char</li></ul></li><li>布尔类型<ul><li>boolean</li></ul></li></ul></li><li>引用数据类型<ul><li>接口(interface)</li><li>数组([])</li><li>类(class)</li></ul></li></ul><table><thead><tr><th>数据类型</th><th>大小</th><th>默认值</th></tr></thead><tbody><tr><td>byte</td><td>1字节8位</td><td>0</td></tr><tr><td>short</td><td>2字节16位</td><td>0</td></tr><tr><td>int</td><td>4字节32位</td><td>0</td></tr><tr><td>long</td><td>8字节64位</td><td>0L</td></tr><tr><td>float</td><td>4字节32位</td><td>0.0F</td></tr><tr><td>double</td><td>8字节64位</td><td>0.0</td></tr><tr><td>char</td><td>2字节16位</td><td>‘\u0’</td></tr><tr><td>boolean</td><td></td><td>false</td></tr></tbody></table><h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><p>转化从低级到高级：byte,short,char（三者同级）—&gt; int —&gt; long—&gt; float —&gt; double<br>低级转换高级：自动类型转换<br>高级转换低级：强制类型转换</p><h5 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h5><ul><li>数据类型相互兼容(整型和浮点型)</li><li>目标类型大于源类型</li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">double</span> <span class="variable">firstAvg</span> <span class="operator">=</span> <span class="number">81.29</span>;</span><br><span class="line">        <span class="type">double</span> secondAvg;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rise</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        secondAvg = firstAvg + rise;</span><br><span class="line">        System.out.println(<span class="string">&quot;第二次平均分是：&quot;</span>+secondAvg);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h5 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h5><p><strong>数据取值范围大的转换为数据取值范围小到的</strong></p><p>now是int类型，但是rise是double，目标数据小于源数据，要进行强制转换，转换的方法在被赋值前面+(int)</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">before</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line">        <span class="type">double</span> <span class="variable">rise</span> <span class="operator">=</span> <span class="number">9.8</span>;</span><br><span class="line">    <span class="comment">//数据类型 变量名 = (数据类型) (被转数据值);</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">now</span> <span class="operator">=</span> (<span class="type">int</span>) (before + rise);</span><br><span class="line">        System.out.println(<span class="string">&quot;现在的份额：&quot;</span>+now);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h4 id="变量的命名规则"><a href="#变量的命名规则" class="headerlink" title="变量的命名规则"></a>变量的命名规则</h4><p>字下美人数骆驼</p><p>字母 </p><p>下划线</p><p>美人：$</p><p>数：数字</p><p>骆驼：驼峰命名法</p><p>变量的首字母小写，如果有第二个单词，则第二个单词的首字母大写。</p><p>注意点：数字不能做为变量的开头</p><h4 id="变量声明及使用"><a href="#变量声明及使用" class="headerlink" title="变量声明及使用"></a>变量声明及使用</h4><ul><li>声明变量，根据数据类型在内存申请空间<ul><li>数据类型变量名;</li></ul></li><li>赋值(将数据存储到对应的内存空间)<ul><li>变量名&#x3D;数值;</li></ul></li><li>简而言之<ul><li>数据类型变量名&#x3D;数值;</li></ul></li><li>使用变量</li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">money</span> <span class="operator">=</span> <span class="number">1000</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">dad</span> <span class="operator">=</span> <span class="string">&quot;爸爸&quot;</span>;</span><br><span class="line">        System.out.println(dad+<span class="string">&quot;给了我&quot;</span>+money+<span class="string">&quot;块钱&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><img src="/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/java4.png" class="" title="声明变量案例"><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>固定不变的值，不能改变的值</p><ul><li>常量通常大写</li><li>不同字符使用下划线分隔</li><li>只能被赋值一次，通常定义时即对其初始化</li><li>比较安全</li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">int</span> <span class="variable">NUM</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">double</span> <span class="variable">PI</span> <span class="operator">=</span> <span class="number">3.14</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        <span class="type">double</span> <span class="variable">area</span> <span class="operator">=</span> PI * r * r;</span><br><span class="line">        System.out.println(<span class="string">&quot;圆的面积为&quot;</span>+area);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h3 id="Scanner输入"><a href="#Scanner输入" class="headerlink" title="Scanner输入"></a>Scanner输入</h3><p>导入Scanner类</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br></pre></td></tr></table></figure><p>创建Scanner对象</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure><p>获取键盘输入的数据</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> scanner.nextInt();</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;输入数据&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line">        System.out.println(<span class="string">&quot;输入的数据是&quot;</span>+i);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><img src="/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/java5.png" class="" title="算术运算符"><ul><li>除法运算，两个操作数是整型的，结果也会是整型的，舍弃掉小数部分；如果有一个数是浮点数，结果将自动转型为浮点型</li><li>取余运算，两个操作数是整型的，结果也会是整型的，如果有一个数是浮点数，结果将自动转型为浮点型</li><li>自增自减运算，a++ 相当于 a &#x3D; a + 1, a++ 是先运用在计算，++a 先计算在运用</li></ul><h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><img src="/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/java6.png" class="" title="关系运算符"><ul><li>“ &#x3D; “是赋值运算，” &#x3D;&#x3D; “是等于运算</li><li>“ &gt; “、” &lt; “、” &gt;&#x3D; “、” &lt;&#x3D; “只支持数值类型的比较，” &#x3D;&#x3D; “、” !&#x3D; “支持所有数据类型的比较</li><li>“ &gt; “、” &lt; “、” &gt;&#x3D; “、” &lt;&#x3D; “运算符优先级别高于</li><li>关系表达式的运算结果是布尔值</li></ul><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><img src="/2024/09/20/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/java7.png" class="" title="逻辑运算符"><ul><li>优先级别 ! &gt; &amp;&amp; &gt; ||</li><li>操作数只能是布尔型，操作结果也是布尔型</li><li>&amp; 和 &amp;&amp; 的区别： &amp;&amp; 左边是false时，不计算右边的表达式，左假即假； &amp; 无论左边真假都会计算右边的表达式</li></ul><h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p>赋值符号 “ &#x3D; “<br>语法：变量名 &#x3D; 表达式；<br>可以和算术运算符结合成复合赋值运算符，例如” +&#x3D; “、” -&#x3D; “、” *&#x3D; “、” &#x2F;&#x3D; “、” %&#x3D; “</p><h4 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h4><p>三元&#x2F;目运算符</p><p>条件 ? 表达式1 : 表达式2</p><p>如果条件为true，则返回表达式2的值，如果条件为false，则返回表达式3的值</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> min;</span><br><span class="line">        min = <span class="number">5</span> &lt; <span class="number">7</span> ? <span class="number">5</span> : <span class="number">7</span>;</span><br><span class="line">        System.out.println(min);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><p>单目运算符包括 !  ++  –，优先级别高</p><p>优先级别最低的是赋值运算符</p><p>可以通过()控制表达式的运算顺序，()优先级最高</p><p>从右向左结合性的只有赋值运算符、三目运算符和单目运算符</p><p>算术运算符 &gt; 关系运算符 &gt; 逻辑运算符 &gt; 赋值运算符</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="变量的概念和使用"><a href="#变量的概念和使用" class="headerlink" title="变量的概念和使用"></a>变量的概念和使用</h4><ul><li><p>概念</p><p>在程序中存储数据并赋值</p></li><li><p>使用</p><p>数据类型+变量名 &#x3D; 数值;</p></li></ul><h4 id="数据类型转换包括自动类型转换和强制类型转换"><a href="#数据类型转换包括自动类型转换和强制类型转换" class="headerlink" title="数据类型转换包括自动类型转换和强制类型转换"></a>数据类型转换包括自动类型转换和强制类型转换</h4><ul><li><p>基本数据类型存储在栈区</p><p>byte</p><p>short</p><p>int</p><p>long</p><p>float</p><p>double</p><p>char</p><p>boolean</p></li><li><p>引用数据类型       存储在堆区</p><p>类</p><p>接口</p><p>数组</p></li><li><p>转换的原则</p></li></ul><p>​转化从低级到高级：byte,short,char（三者同级）—&gt; int —&gt; long—&gt; float —&gt; double</p><ul><li><p>自动类型转换</p><p>数据类型相互兼容(整型和浮点型)</p><p>当目标类型大于源类型</p></li><li><p>强制类型转换</p><p>数据取值范围大的转换为数据取值范围小到的</p><p>转换的方法在被赋值前面+(要转换的数据类型)</p></li></ul><h4 id="Scanner类可以从键盘获取输入的信息"><a href="#Scanner类可以从键盘获取输入的信息" class="headerlink" title="Scanner类可以从键盘获取输入的信息"></a>Scanner类可以从键盘获取输入的信息</h4><ul><li><p>new一个Scanner类</p></li><li><p>获取键盘数据</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> scanner.nextInt();</span><br></pre></td></tr></table></figure></li></ul><h4 id="赋值运算符、算术运算符、关系运算符、逻辑运算符"><a href="#赋值运算符、算术运算符、关系运算符、逻辑运算符" class="headerlink" title="赋值运算符、算术运算符、关系运算符、逻辑运算符"></a>赋值运算符、算术运算符、关系运算符、逻辑运算符</h4><p>这些运算符的优先级</p><p>算术运算符 &gt; 关系运算符 &gt; 逻辑运算符 &gt; 赋值运算符</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初识Java</title>
+      <link href="/2024/09/19/%E5%88%9D%E8%AF%86Java/"/>
+      <url>/2024/09/19/%E5%88%9D%E8%AF%86Java/</url>
+      
+        <content type="html"><![CDATA[<h2 id="初识Java"><a href="#初识Java" class="headerlink" title="初识Java"></a>初识Java</h2><h3 id="Java可以做什么"><a href="#Java可以做什么" class="headerlink" title="Java可以做什么"></a>Java可以做什么</h3><h4 id="B-S架构"><a href="#B-S架构" class="headerlink" title="B&#x2F;S架构"></a>B&#x2F;S架构</h4><p>基于浏览器&#x2F;服务器应用的程序，如：京东、美团、bilibili等</p><h4 id="C-S架构"><a href="#C-S架构" class="headerlink" title="C&#x2F;S架构"></a>C&#x2F;S架构</h4><p>基于客户端&#x2F;服务器应用的程序，存在安装及部署方面的问题</p><h4 id="安卓app开发"><a href="#安卓app开发" class="headerlink" title="安卓app开发"></a>安卓app开发</h4><h4 id="大数据基础算法"><a href="#大数据基础算法" class="headerlink" title="大数据基础算法"></a>大数据基础算法</h4><h3 id="组成结构"><a href="#组成结构" class="headerlink" title="组成结构"></a>组成结构</h3><h4 id="JavaSE"><a href="#JavaSE" class="headerlink" title="JavaSE"></a>JavaSE</h4><p>Java的基础和标准版</p><h4 id="JavaEE"><a href="#JavaEE" class="headerlink" title="JavaEE"></a>JavaEE</h4><p>针对企业级应用的扩展版</p><h4 id="JavaME"><a href="#JavaME" class="headerlink" title="JavaME"></a>JavaME</h4><p>针对嵌入式和移动设备的精简版</p><h3 id="使用记事本编写程序"><a href="#使用记事本编写程序" class="headerlink" title="使用记事本编写程序"></a>使用记事本编写程序</h3><p>使用记事本编译.java源程序。使用javac命令编译，生成.class文件(字节码文件)，使用java命令运行.class文件</p><img src="/2024/09/19/%E5%88%9D%E8%AF%86Java/java1.png" class="" title="使用cmd运行java源文件"><img src="/2024/09/19/%E5%88%9D%E8%AF%86Java/java2.png" class="" title="运行结果"><h3 id="JDK与JRE、JVM三种的关系"><a href="#JDK与JRE、JVM三种的关系" class="headerlink" title="JDK与JRE、JVM三种的关系"></a>JDK与JRE、JVM三种的关系</h3><h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4><p>Java标准开发包，它提供了编译、运行Java程序所需的各种工具和资源，包括Java编译器、Java运行环境，以及常用的Java类库等。JDK里面包含JRE</p><h5 id="bin"><a href="#bin" class="headerlink" title="bin"></a>bin</h5><p>可执行文件</p><h5 id="jre"><a href="#jre" class="headerlink" title="jre"></a>jre</h5><p>运行java程序所依赖的JVM</p><h5 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h5><p>运行java程序所依赖的Jar包</p><img src="/2024/09/19/%E5%88%9D%E8%AF%86Java/java3.png" class="" title="JDK内容"><h4 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h4><p>Java运行环境，用于解释执行Java的字节码文件。JRE包含JVM</p><h4 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h4><p>Java虚拟机，是JRE的一部分。它是整个java实现跨平台的最核心的部分，负责解释执行字节码文件，是可运行java字节码文件的虚拟计算机。所有平台的上的JVM向编译器提供相同的接口，而编译器只需要面向虚拟机，生成虚拟机能识别的代码，然后由虚拟机来解释执行。</p><p>使用Java编译器编译Java程序时，生成的字节码文件(与平台无关)，.class文件只面向<code>JVM</code>，都提供了相同的接口。JVM是Java程序跨平台的关键部分</p><h4 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h4><p>JDK 用于开发，JRE 用于运行java程序。</p><p>JDk包含JRE，JDK 和 JRE 中都包含 JVM。</p><p>JVM 是 java 编程语言的核心并且具有平台独立性。</p><h3 id="API文档"><a href="#API文档" class="headerlink" title="API文档"></a>API文档</h3><p>这是java8的api文档</p><p>•<a href="https://docs.oracle.com/javase/8/docs/api/">https://docs.oracle.com/javase/8/docs/api/</a></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>简述使用记事本开发Java程序的步骤</p><ol><li>新建文本文档，后缀名改为.java文件</li><li>在文本中编写java程序代码</li><li>打开终端运行java文件<ul><li>Win+R输入cmd，将路径改到你的.java文件下</li><li>javac空格，再输入文件名.java，回车(enter键)，此时编译器会生成对应的字节码文件</li><li>java 输入文件名，进行编译运行</li></ul></li></ol><p>简述Java程序运行过程</p><p>​通过编译器生成字节码文件，通过JVM编译执行</p><p>简述Java编译原理</p><p>​.java文件转换成字节码文件</p><p>如何在控制台输出一条信息？</p><p>​编写main方法，写输出语句</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Helloworld</span>()&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="comment">//ln表示换行</span></span><br><span class="line">        System.out.println(<span class="string">&quot;helloworld&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>简述使用IDEA开发Java程序的步骤</p><ul><li>安装idea</li><li>创建java项目</li><li>新建java文件</li><li>编写源代码</li><li>运行</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>关于作者about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>归档archives</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>留言板comments</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>摄影photos</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分享share</title>
+      <link href="/share/index.html"/>
+      <url>/share/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
+</search>
