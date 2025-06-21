@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>图库使用教程</title>
+      <link href="/2025/06/21/%E5%9B%BE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/06/21/%E5%9B%BE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="图库"><a href="#图库" class="headerlink" title="图库"></a>图库</h1><p>在 Hexo 中，Butterfly 主题的外挂标签<code>galleryGroup</code>主要用于创建图库分组</p><ul><li><strong>作用</strong>：用于在页面中展示一组相关的图片集合，将图片按照不同的主题或类别进行分组展示，方便用户对图片进行分类管理和浏览。</li><li><strong>用法</strong>：在创建图库页面时使用，基本语法为<code>&#123;% galleryGroup '分组名称' '分组描述' '图片路径前缀' '封面图片链接' %&#125;</code>。</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Blog常用指令</title>
+      <link href="/2025/06/21/blog%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+      <url>/2025/06/21/blog%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Blog常用指令"><a href="#Blog常用指令" class="headerlink" title="Blog常用指令"></a>Blog常用指令</h1><h2 id="1-项目部署到github"><a href="#1-项目部署到github" class="headerlink" title="1.项目部署到github"></a>1.项目部署到github</h2><p>修改好配置后，运行如下命令，将代码部署到 GitHub</p><ul><li>hexo clean：删除之前生成的文件，若未生成过静态文件，可忽略此命令。</li><li>hexo generate：生成静态文章，可以用<code>hexo g</code>缩写</li><li>hexo deploy：部署文章，可以用<code>hexo d</code>缩写</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  // Git BASH终端</span><br></pre></td></tr></table></figure><h2 id="2-让json文件变整齐"><a href="#2-让json文件变整齐" class="headerlink" title="2.让json文件变整齐"></a>2.让json文件变整齐</h2><p>当打开json文件时，里面的代码一长串，没规则，使用快捷键<br>Ctrl+A，再Ctrl+Alt+L，就可以排版规则了</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown标题使用手册</title>
+      <link href="/2025/06/21/%E6%96%87%E7%AB%A0markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+      <url>/2025/06/21/%E6%96%87%E7%AB%A0markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="markdown标题使用手册"><a href="#markdown标题使用手册" class="headerlink" title="markdown标题使用手册"></a>markdown标题使用手册</h1><p><code>Front-matter</code> 是 markdown 文件最上方以<code>---</code>分隔的区域，用于指定个别档案的变数。</p><ul><li>Page Front-matter 用于页面配置</li><li>Post Front-matter 用于文章页配置</li></ul><p>如果标注可选的参数，可根据自己需要添加，不用全部都写</p><p><strong>Page Front-matter：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line"><span class="built_in">date</span>:</span><br><span class="line">updated:</span><br><span class="line"><span class="built_in">type</span>:</span><br><span class="line">comments:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">top_img:</span><br><span class="line">mathjax:</span><br><span class="line">katex:</span><br><span class="line">aside:</span><br><span class="line">aplayer:</span><br><span class="line">highlight_shrink:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><table><thead><tr><th>写法</th><th>解释</th></tr></thead><tbody><tr><td>title</td><td>【必需】页面标题</td></tr><tr><td>date</td><td>【必需】页面创建日期</td></tr><tr><td>type</td><td>【必需】标签、分类和友链三个页面需要配置</td></tr><tr><td>updated</td><td>【可选】页面更新日期</td></tr><tr><td>description</td><td>【可选】页面描述</td></tr><tr><td>keywords</td><td>【可选】页面关键字</td></tr><tr><td>comments</td><td>【可选】显示页面评论模块(默认 true)</td></tr><tr><td>top_img</td><td>【可选】页面顶部图片</td></tr><tr><td>mathjax</td><td>【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</td></tr><tr><td>kates</td><td>【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</td></tr><tr><td>aside</td><td>【可选】显示侧边栏 (默认 true)</td></tr><tr><td>aplayer</td><td>【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</td></tr><tr><td>highlight_shrink</td><td>【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中highlight_shrink的配置)</td></tr></tbody></table><p><strong>Post Front-matter：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line"><span class="built_in">date</span>:</span><br><span class="line">updated:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">keywords:</span><br><span class="line">description:</span><br><span class="line">top_img:</span><br><span class="line">comments:</span><br><span class="line">cover:</span><br><span class="line">toc:</span><br><span class="line">toc_number:</span><br><span class="line">toc_style_simple:</span><br><span class="line">copyright:</span><br><span class="line">copyright_author:</span><br><span class="line">copyright_author_href:</span><br><span class="line">copyright_url:</span><br><span class="line">copyright_info:</span><br><span class="line">mathjax:</span><br><span class="line">katex:</span><br><span class="line">aplayer:</span><br><span class="line">highlight_shrink:</span><br><span class="line">aside:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><table><thead><tr><th>写法</th><th>解释</th></tr></thead><tbody><tr><td>title</td><td>【必需】文章标题</td></tr><tr><td>date</td><td>【必需】文章创建日期</td></tr><tr><td>updated</td><td>【可选】文章更新日期</td></tr><tr><td>tags</td><td>【可选】文章标签</td></tr><tr><td>categories</td><td>【可选】文章分类</td></tr><tr><td>keywords</td><td>【可选】文章关键字</td></tr><tr><td>description</td><td>【可选】文章描述</td></tr><tr><td>top_img</td><td>【可选】文章顶部图片</td></tr><tr><td>cover</td><td>【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false&#x2F;图片地址&#x2F;留空)</td></tr><tr><td>comments</td><td>【可选】显示文章评论模块(默认 true)</td></tr><tr><td>toc</td><td>【可选】显示文章TOC(默认为设置中toc的enable配置)</td></tr><tr><td>toc_number</td><td>【可选】显示toc_number(默认为设置中toc的number配置)</td></tr><tr><td>toc_style_simple</td><td>【可选】显示 toc 简洁模式</td></tr><tr><td>copyright</td><td>【可选】显示文章版权模块(默认为设置中post_copyright的enable配置)</td></tr><tr><td>copyright_author</td><td>【可选】文章版权模块的文章作者</td></tr><tr><td>copyright_author_href</td><td>【可选】文章版权模块的文章作者链接</td></tr><tr><td>copyright_url</td><td>【可选】文章版权模块的文章连结链接</td></tr><tr><td>copyright_info</td><td>【可选】文章版权模块的版权声明文字</td></tr><tr><td>mathjax</td><td>【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</td></tr><tr><td>katex</td><td>【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</td></tr><tr><td>aplayer</td><td>【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</td></tr><tr><td>highlight_shrink</td><td>【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中highlight_shrink的配置)</td></tr><tr><td>aside</td><td>【可选】显示侧边栏 (默认 true)</td></tr></tbody></table>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
