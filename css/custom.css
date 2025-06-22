@@ -1,3 +1,4 @@
+@import "//at.alicdn.com/t/font_2264842_b004iy0kk2b.css";
 /* 页脚与头图透明 */
 #footer {
     background: transparent !important;
@@ -95,4 +96,126 @@
 #aside-content > .card-widget.card-info > #card-info-btn {
     background-color: #3eb8be;
     border-radius: 8px;
+}
+
+/* 鼠标样式 */
+#cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    /* 这里改变跟随的底色 */
+    background: rgb(57, 197, 187);
+    border-radius: 8px;
+    opacity: 0.25;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
+}
+
+#cursor.hidden {
+    opacity: 0;
+}
+
+#cursor.hover {
+    opacity: 0.1;
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+}
+
+#cursor.active {
+    opacity: 0.5;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* 这里可以自定义图标大小 */
+    font-size: 3em;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.neko {
+    width: 64px;
+    height: 64px;
+    background-image: url("https://bu.dusays.com/2022/07/20/62d812db74be9.png");
+    position: fixed;  /* 改为fixed定位 */
+    right: 32px;
+    bottom: 32px;  /* 添加底部定位 */
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: none;  /* 移除translateX */
+    cursor: pointer;
+    z-index: 9999;  /* 确保在最上层 */
+}
+
+.neko::after {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://bu.dusays.com/2022/07/20/62d812d95e6f5.png");
+    background-size: contain;
+    z-index: 9999;
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    line-height: 100px;
+    top: -115%;
+
+}
+
+.neko.showMsg::after {
+    content: attr(data-msg);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.neko:hover::after {
+    content: attr(data-msg);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.neko.fontColor::after {
+    color: #333;
+}
+
+/**
+ * @description: 滚动条样式  跟猫二选一
+ */
+@media screen and (max-width:992px) {
+    ::-webkit-scrollbar {
+        width: 8px !important;
+        height: 8px !important
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(255 255 255 / .3);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+        border-radius: 2em
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
 }
