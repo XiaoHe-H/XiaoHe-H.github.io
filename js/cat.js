@@ -34,7 +34,7 @@ if (document.body.clientWidth > 992) {
                 borderRadius: 5 + 'px',
                 right: 60 + 'px',
                 // 这里可以换为你喜欢的图片，例如我就换为了雪人，但是要抠图
-                nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
+                nekoImg: "/gallery/system/cat.png",
                 hoverMsg: "喵喵喵~",
                 color: "#6f42c1",
                 during: 500,
@@ -133,7 +133,7 @@ if (document.body.clientWidth > 992) {
         //自定义（去掉以下注释，并注释掉其他的查看效果）
         $("#myscoll").nekoScroll({
             nekoname:'neko1', //nekoname，相当于id
-            nekoImg:'img/cat.png', //neko的背景图片
+            nekoImg:'/gallery/system/cat.png', //neko的背景图片
             //scImg:"img/绳1.png", //绳子的背景图片
             bgcolor:'#FFA500', //背景颜色，没有绳子背景图片时有效
             zoom:0.9, //绳子长度的缩放值
