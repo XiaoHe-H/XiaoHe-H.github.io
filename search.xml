@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>考研day1</title>
+      <link href="/2025/06/22/%E8%80%83%E7%A0%94day1/"/>
+      <url>/2025/06/22/%E8%80%83%E7%A0%94day1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Day01"><a href="#Day01" class="headerlink" title="Day01"></a>Day01</h1><h2 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h2><ul><li>答辩完后，学一个上午线代</li><li>下午408</li><li>晚上软件工程期末复习，今天晚上必须完成</li></ul><h2 id="低碳日"><a href="#低碳日" class="headerlink" title="低碳日"></a>低碳日</h2><ul><li>6点40起来，进行全身拉伸运动</li><li>早餐，三明治</li><li>中餐，吃食堂，米饭不能过量</li><li>下午加餐，来包鸡胸</li><li>晚餐，黄瓜+鸡蛋</li><li>如果实在很饿就来勺花生酱</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown与外挂标签</title>
       <link href="/2025/06/22/Markdown%E4%B8%8E%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
       <url>/2025/06/22/Markdown%E4%B8%8E%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</url>
@@ -34,7 +59,7 @@
       <link href="/2025/06/21/blog%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
       <url>/2025/06/21/blog%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
       
-        <content type="html"><![CDATA[<h1 id="Blog常用指令"><a href="#Blog常用指令" class="headerlink" title="Blog常用指令"></a>Blog常用指令</h1><h2 id="1-项目部署到github"><a href="#1-项目部署到github" class="headerlink" title="1.项目部署到github"></a>1.项目部署到github</h2><p>修改好配置后，运行如下命令，将代码部署到 GitHub</p><ul><li>hexo clean：删除之前生成的文件，若未生成过静态文件，可忽略此命令。</li><li>hexo generate：生成静态文章，可以用<code>hexo g</code>缩写</li><li>hexo deploy：部署文章，可以用<code>hexo d</code>缩写</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  // Git BASH终端</span><br></pre></td></tr></table></figure><h2 id="2-让json文件变整齐"><a href="#2-让json文件变整齐" class="headerlink" title="2.让json文件变整齐"></a>2.让json文件变整齐</h2><p>当打开json文件时，里面的代码一长串，没规则，使用快捷键<br>Ctrl+A，再Ctrl+Alt+L，就可以排版规则了</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Blog常用指令"><a href="#Blog常用指令" class="headerlink" title="Blog常用指令"></a>Blog常用指令</h1><h2 id="1-项目部署到github"><a href="#1-项目部署到github" class="headerlink" title="1.项目部署到github"></a>1.项目部署到github</h2><p>修改好配置后，运行如下命令，将代码部署到 GitHub</p><ul><li>hexo clean：删除之前生成的文件，若未生成过静态文件，可忽略此命令。</li><li>hexo generate：生成静态文章，可以用<code>hexo g</code>缩写</li><li>hexo deploy：部署文章，可以用<code>hexo d</code>缩写</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  // Git BASH终端</span><br></pre></td></tr></table></figure><h2 id="2-让json文件变整齐"><a href="#2-让json文件变整齐" class="headerlink" title="2.让json文件变整齐"></a>2.让json文件变整齐</h2><p>当打开json文件时，里面的代码一长串，没规则，使用快捷键<br>Ctrl+A，再Ctrl+Alt+L，就可以排版规则了</p><h2 id="3-本地上传blog"><a href="#3-本地上传blog" class="headerlink" title="3.本地上传blog"></a>3.本地上传blog</h2><h3 id="3-1创建新文章文件"><a href="#3-1创建新文章文件" class="headerlink" title="3.1创建新文章文件"></a>3.1创建新文章文件</h3><p>在Hexo目录下，使用terminal/cmd/powershell输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章名字&quot;</span></span><br></pre></td></tr></table></figure><p>再到本地对应的文件上的.md文本上添加内容</p><h3 id="3-2-更新内容添加到github上"><a href="#3-2-更新内容添加到github上" class="headerlink" title="3.2 更新内容添加到github上"></a>3.2 更新内容添加到github上</h3><blockquote><p>这一步需要你安装好git，在GitBash上输入如下命令</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo c &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>这样就上传成功了</p>]]></content>
       
       
       
