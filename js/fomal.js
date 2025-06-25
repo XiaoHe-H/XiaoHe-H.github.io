@@ -285,7 +285,7 @@ function showWelcome() {
   try {
     //自定义文本和需要放的位置
     document.getElementById("welcome-info").innerHTML =
-      `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+      `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:rgba(16, 185, 129, 0.1)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:rgba(16, 185, 129, 0.1)">${dist}</span> 公里，当前的IP地址为： <span style="color:rgba(16, 185, 129, 0.1)">${ip}</span>， ${posdesc}</b>`;
   } catch (err) {
     // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
   }
@@ -364,7 +364,7 @@ document.addEventListener("copy", function () {
 
 // f12提醒但不禁用
 document.onkeydown = function (e) {
-  /*if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) {
+  if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) {
     debounce(function () {
       new Vue({
         data: function () {
@@ -380,11 +380,11 @@ document.onkeydown = function (e) {
         }
       })
     }, 300);
-  }*/
-  document.onkeydown = function (e) {
+  }
+  /*document.onkeydown = function (e) {
     if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) return btf.snackbarShow("你真坏，不能打开控制台喔!"), event.keyCode = 0, event.returnValue = !1, !1
   };
-};
+};*/
 /* 禁用f12与按键防抖 end */
 
 //----------------------------------------------------------------
@@ -3406,7 +3406,7 @@ function createWinbox() {
         onclick="setColor('blackgray')"></div>
 
 <h2>四、背景设置</h2>
-<center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
+<center><button onclick="resetBg()" style="background:rgba(16, 185, 129, 0.1);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
 
 <h3>1. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
@@ -3468,12 +3468,12 @@ function createWinbox() {
 <h3>8. 自定义背景</h3>
 <details class="folding-tag" cyan><summary> 设置自定义背景 </summary>
               <div class='content'>
-              <p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://source.fomal.cc/img/home_bg.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>
+              <p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://source.fomal.cc/img/home_bg.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:rgba(16, 185, 129, 0.1);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>
               </div>
             </details>
 
 <br>
-<center><div style="font-size:1.2em;color:var(--theme-color);font-weight:bold;">------ ( •̀ ω •́ )y 到底啦 ------</div></center>
+<center><div style="font-size:1.2em;color:rgba(16, 185, 129, 0.1);font-weight:bold;">------ ( •̀ ω •́ )y 到底啦 ------</div></center>
 <br>
 
 </div>
@@ -3544,12 +3544,11 @@ function winResize() {
 }
 
 // 切换状态，窗口已创建则控制窗口显示和隐藏，没窗口则创建窗口
-function toggleWinbox() {
-  if (document.querySelector("#meihuaBox")) {
-    winbox.toggleClass("hide");
-  } else {
-    createWinbox();
-  };
-}
-
+  function toggleWinbox() {
+    if (document.querySelector("#meihuaBox")) {
+      winbox.toggleClass("hide");
+    } else {
+      createWinbox();
+    };
+  }
 /* 美化模块 end */
